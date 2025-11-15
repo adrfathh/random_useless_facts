@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Useless Facts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🤪 Random Useless Facts</h1>
+        <div class="card">
+            <p id="fact">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam, ex.</p>
+            <button class="random" id="random">Get another random facts</button>
+        </div>
+    </div>
+
+    <script>
+        const facts = [
+            "Kuliah lo ambil apa? Gue sih ambil hikmahnya aja",
+            "Jalan menuju sukses dipenuhi banyak tempat parkir yang menggoda",
+            "Jomblo tidak harus malu, jomblo bukan berarti tidak laku, tapi memang tidak ada yang mau",
+            "Semua manusia sama di hadapan ikan",
+            "Uang bukanlah hal terpenting di dunia, tapi cinta. Untungnya, aku cinta uang",
+            "Hidup itu sulit; lebih sulit jika kamu bodoh",
+            "Akal sehat itu seperti deodoran. Orang-orang yang paling membutuhkannya tidak pernah menggunakannya"
+        ];
+
+        const factText = document.getElementById("fact");
+        const btn = document.getElementById("random");
+
+        btn.addEventListener("click", () => {
+            factText.textContent = "Loading...";
+            setTimeout(() => {
+                const randomIndex = Math.floor(Math.random() * facts.length);
+                factText.textContent = facts[randomIndex];
+            }, 700);
+        });
+    </script>
+</body>
+</html>

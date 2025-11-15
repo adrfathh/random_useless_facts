@@ -1,0 +1,116 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.container{
+    width: 100vw;
+    max-width: 100vw;
+    min-height: 100vh;
+    text-align: center;
+    background-color: rgb(235, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    color: #22223b;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+    text-align: center;
+    word-break: break-word;
+}
+
+.card{
+    background: #fff;
+    padding: 2rem;
+    border-radius: 18px;
+    box-shadow: 0 6px 32px 0 rgba(60, 72, 88, 0.12);
+    max-width: 420px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    box-sizing: border-box;
+}
+
+.card p {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    min-height: 3.5rem;
+    word-break: break-word;
+    color: #3a3a3a;
+    line-height: 1.5;
+}
+
+.random{
+    background: linear-gradient(90deg, #6366f1 0%, #60a5fa 100%);
+    padding: 0.75rem 1.5rem;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    transition: 0.2s, ease-in-out 0.1s;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(60, 72, 88, 0.10);
+    align-items: center;
+}
+
+.random:hover{
+    background: linear-gradient(90deg, #4f46e5 0%, #3b82f6 100%);
+    padding: 1rem 1.75rem;
+    font-size: 1.025rem;
+}
+
+/* GABISA MAENAN RESPONSIF:( */
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.3rem;
+        margin-bottom: 1.2rem;
+    }
+    .card {
+        max-width: 98vw;
+        width: 98vw;
+        padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+        border-radius: 10px;
+        gap: 1rem;
+    }
+    .card p {
+        font-size: 1rem;
+        min-height: 2rem;
+    }
+    .random {
+        font-size: 0.95rem;
+        padding: 0.6rem 1rem;
+    }
+    .card {
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .card {
+        padding: 0.7rem 0.1rem 0.7rem 0.1rem;
+        border-radius: 6px;
+        max-width: 100vw;
+        width: 100vw;
+    }
+    .card p {
+        font-size: 0.92rem;
+        min-height: 1.2rem;
+    }
+    .random {
+        font-size: 0.85rem;
+        padding: 0.5rem 0.5rem;
+    }
+}
